@@ -15,3 +15,7 @@ used is in the main.c file.
 A Functionality: Since each robot's sensors are a little bit different, you need to fully characterize the sensor for your robot. Create a table and graphical plot that shows the ATD values for a variety of distances from a maze wall. This table/graph must be generated for each IR sensor. Use these values to determine how the IR sensors work so you can properly use them to solve the maze.
       
 --Committed at 2311 7 December 2014: in the "Lab7ExcelFile.xlsx"
+
+Maze Diagram Picture:
+https://cloud.githubusercontent.com/assets/6405923/5335500/7a9b234a-7e68-11e4-8805-1b8973188375.png
+
