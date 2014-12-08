@@ -16,6 +16,4 @@ A Functionality: Since each robot's sensors are a little bit different, you need
       
 --Committed at 2311 7 December 2014: in the "Lab7ExcelFile.xlsx"
 
-Maze Diagram Picture:
-https://cloud.githubusercontent.com/assets/6405923/5335500/7a9b234a-7e68-11e4-8805-1b8973188375.png
 
