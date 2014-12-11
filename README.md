@@ -34,3 +34,20 @@ First I started with the header file to make the methods I would use to check th
 ```
 
 The methods return an unsigned int that is the voltage level converted to an `int` to determine whether or not an object was in front of the sensor.
+
+To complete the analog to digital conversion the code below was used:
+
+```
+		ADC10CTL0 = ADC10SHT_3 + ADC10ON; // ADC10ON, interrupt enabled
+		ADC10CTL1 = INCH_2;                       // input A2 (left sensor)
+		ADC10AE0 |= BIT2;                         // PA.1 ADC option select
+		ADC10CTL1 |= ADC10SSEL1 | ADC10SSEL0;                // Select SMCLK
+
+		ADC10CTL0 |= ENC + ADC10SC;             // Sampling and conversion start
+
+		while(ADC10CTL1 & ADC10BUSY);
+
+		return ADC10MEM;
+```
+
+The only change between methods is what in channel to read based on the pin output used to connect the sensor readings to the MSP430. For example, INCH_2 and BIT2 to read the left sensor. The important part of the code is the while statement that essentially "waits" for the analog to digital conversion.
