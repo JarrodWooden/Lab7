@@ -50,4 +50,16 @@ To complete the analog to digital conversion the code below was used:
 		return ADC10MEM;
 ```
 
-The only change between methods is what in channel to read based on the pin output used to connect the sensor readings to the MSP430. For example, INCH_2 and BIT2 to read the left sensor. The important part of the code is the while statement that essentially "waits" for the analog to digital conversion.
+The only change between methods is what in channel to read based on the pin output used to connect the sensor readings to the MSP430. For example, INCH_2 and BIT2 to read the left sensor. The important part of the code is the while statement that essentially "waits" for the analog to digital conversion. Using a while statement to wait for the conversion instead of an interrupt that will wait for the completion of the conversion will alow for the user of the library to use other interrupts in their main program and not have to worry about interrupt priorities while they are coding.
+
+#A Functionality
+
+For A Functionality, the students needed to measure the voltages the sensor reads when it is certain distances from the wall.
+
+The voltage reading can be converted into a hex reading by dividing the output voltage by 5V divided by 2^10 levels (to get volts per level) and then the output is what level that voltage reading is on in decimal; THEN, the decimal level can be converted into hex in excel and can be used in the program for comparing the ADC to whatever voltage level in hex to determine how far away from a wall the sensor is.
+
+*Note: the voltage were read using a multimeter plugged up to the output of each sensor.
+
+The excel file is posted under lab seven as well.
+
+#Have a great Air Force Day!!!
