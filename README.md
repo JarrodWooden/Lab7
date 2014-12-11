@@ -17,3 +17,20 @@ A Functionality: Since each robot's sensors are a little bit different, you need
 --Committed at 2311 7 December 2014: in the "Lab7ExcelFile.xlsx"
 
 
+#Required and B Functionality
+
+For required functionaltiy, the goal was to get the IR sensors to function properly and to light up LED lights based on whether or not a piece of paper is in front of the sensor.
+
+For the left sensor turn the left LED on, for the right sensor turn the right LED on, for the middle sensor turn both of the LEDs on. This is mainly to make sure that the sensors are operating correctly and whether or not we did the analog to digital conversion correctly.
+
+When I accomplished required functionality to make the sensors operate correctly and turn on the LED lights, I finished B functionality at the same time.
+
+First I started with the header file to make the methods I would use to check the distance from an object, or how hight he voltage level was for each sensor. The three methods are below:
+
+```
+	unsigned int readLeftSensor();
+	unsigned int readRightSensor();
+	unsigned int readMiddleSensor();
+```
+
+The methods return an unsigned int that is the voltage level converted to an `int` to determine whether or not an object was in front of the sensor.
